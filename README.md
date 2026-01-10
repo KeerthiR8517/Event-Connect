@@ -71,7 +71,8 @@ Make sure backend is running before frontend to get JWT authentication working.
 <img width="1917" height="795" alt="image" src="https://github.com/user-attachments/assets/16817ba0-469d-45fc-955b-05a85f68f52e" />
 
 ### Booking & Top Most Booked Events
-<img width="1726" height="954" alt="image" src="https://github.com/user-attachments/assets/433799b4-6448-486a-b9fe-090475576acd" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/dbb79e5c-e3e7-46d6-acd5-06d13c965e8d" />
+
 
 
 
