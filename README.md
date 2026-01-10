@@ -34,30 +34,30 @@ Below is a architecture of the Event Connect system:
 
 # Backend (Spring Boot)
 
-Install Java 8 and Maven.
-Clone repo and navigate to backend folder:
-git clone <your-repo-url>
-cd backend
-Update application.properties with your PostgreSQL credentials.
-Run the backend
+- Install Java 8 and Maven.
+- Clone repo and navigate to backend folder:
+- git clone <your-repo-url>
+- cd backend
+- Update application.properties with your PostgreSQL credentials.
+- Run the backend
 
 # Frontend (React)
 
-Navigate to frontend folder:
-cd frontend
-Install dependencies
-npm install
-Start the frontend:
-npm start
-Runs on http://localhost:3000
+- Navigate to frontend folder:
+- cd frontend
+- Install dependencies
+- npm install
+- Start the frontend:
+- npm start
+- Runs on http://localhost:3000
 
 # Database
 
-Install PostgreSQL.
-Create database (e.g., event_connect) and run schema SQL script:
-CREATE TABLE users (...);
-CREATE TABLE events (...);
-CREATE TABLE bookings (...);
+- Install PostgreSQL.
+- Create database (e.g., event_connect) and run schema SQL script:
+- CREATE TABLE users (...);
+- CREATE TABLE events (...);
+- CREATE TABLE bookings (...);
 
 # Note:
 Make sure backend is running before frontend to get JWT authentication working.
