@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Event Connect – Event Booking Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simplified event booking system built with **Spring Boot** (backend) and **React** (frontend).  
+Users can browse events, book tickets, and manage bookings. Includes **JWT authentication** and **rate-limiting** for bookings.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### Frontend (React)
+- User login with **JWT-based authentication**
+- Browse events (Event List)
+- Book tickets 
+- Display booking success or **rate-limit messages** (max 5 bookings/minute)
+- Responsive design
 
-### `npm start`
+### Backend (Spring Boot)
+- REST APIs for authentication and booking
+- JWT authentication with token expiration (15 minutes)
+- Rate-limiting: Max 5 bookings per user per minute
+- Proper error handling for invalid credentials, rate-limit, and server issues
+- CORS enabled for frontend communication
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Database (PostgreSQL)
+- Tables: `users`, `events`, `bookings`
+- Queries optimized with indexes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ## System Design
 
-### `npm test`
+Below is a architecture of the Event Connect system:
+           ┌──────────────┐
+           │**Frontend**  │
+           │  React App   │
+           │  (Login,     │
+           │   Event List,│
+           │   Booking)   │
+           └─────┬────────┘
+                 │ HTTP + JWT
+                 ▼
+           ┌──────────────┐
+           │  **Backend** │
+           │ Spring Boot  │
+           │ REST APIs    │
+           │ Auth         |
+           | Controller   │
+           │ Booking      |
+           | Controller   │
+           └─────┬────────┘
+                 │ JDBC/SQL
+                 ▼
+           ┌──────────────┐
+           │**Database** │
+           │ PostgreSQL   │
+           │ Users, Events│
+           │ Bookings     │
+           └──────────────┘
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 2. Setup Instructions
 
-### `npm run build`
+# Backend (Spring Boot)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install Java 8 and Maven.
+Clone repo and navigate to backend folder:
+git clone <your-repo-url>
+cd backend
+Update application.properties with your PostgreSQL credentials.
+Run the backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Frontend (React)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Navigate to frontend folder:
+cd frontend
+Install dependencies
+npm install
+Start the frontend:
+npm start
+Runs on http://localhost:3000
 
-### `npm run eject`
+# Database
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Install PostgreSQL.
+Create database (e.g., event_connect) and run schema SQL script:
+CREATE TABLE users (...);
+CREATE TABLE events (...);
+CREATE TABLE bookings (...);
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Note:
+Make sure backend is running before frontend to get JWT authentication working.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Screenshots
+### Login Page
+<img width="1919" height="956" alt="image" src="https://github.com/user-attachments/assets/88814ef0-6557-43cd-9c3b-4df8fd38380a" />
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Event List
+<img width="1917" height="795" alt="image" src="https://github.com/user-attachments/assets/16817ba0-469d-45fc-955b-05a85f68f52e" />
 
-## Learn More
+### Booking & Top Most Booked Events
+<img width="1726" height="954" alt="image" src="https://github.com/user-attachments/assets/433799b4-6448-486a-b9fe-090475576acd" />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
