@@ -31,9 +31,9 @@ Below is a architecture of the Event Connect system:
 <img width="463" height="540" alt="image" src="https://github.com/user-attachments/assets/0ae06ddb-97b1-4bca-b7e0-e5a71174a8fd" />
 
 
-## 2. Setup Instructions
+# Setup Instructions
 
-# Backend (Spring Boot)
+## Backend (Spring Boot)
 
 - Install Java 8 and Maven.
 - Clone repo and navigate to backend folder:
@@ -42,7 +42,7 @@ Below is a architecture of the Event Connect system:
 - Update application.properties with your PostgreSQL credentials.
 - Run the backend
 
-# Frontend (React)
+## Frontend (React)
 
 - Navigate to frontend folder:
 - cd frontend
@@ -52,7 +52,7 @@ Below is a architecture of the Event Connect system:
 - npm start
 - Runs on http://localhost:3000
 
-# Database
+## Database
 
 - Install PostgreSQL.
 - Create database (e.g., event_connect) and run schema SQL script:
