@@ -18,6 +18,7 @@ Users can browse events, book tickets, and manage bookings. Includes **JWT authe
 - Rate-limiting: Max 5 bookings per user per minute
 - Proper error handling for invalid credentials, rate-limit, and server issues
 - CORS enabled for frontend communication
+- Tested APIs using **Postman**
 
 ### Database (PostgreSQL)
 - Tables: `users`, `events`, `bookings`
