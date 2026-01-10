@@ -59,7 +59,7 @@ Below is a architecture of the Event Connect system:
 - CREATE TABLE events (...);
 - CREATE TABLE bookings (...);
 
-# Note:
+### Note:
 Make sure backend is running before frontend to get JWT authentication working.
 
 ## Screenshots
