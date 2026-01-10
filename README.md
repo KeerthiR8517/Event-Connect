@@ -23,7 +23,7 @@ Users can browse events, book tickets, and manage bookings. Includes **JWT authe
 - Tables: `users`, `events`, `bookings`
 - Queries optimized with indexes
 
-- ## System Design
+ ## System Design
 
 Below is a architecture of the Event Connect system:
     
