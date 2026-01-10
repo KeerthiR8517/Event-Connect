@@ -26,32 +26,9 @@ Users can browse events, book tickets, and manage bookings. Includes **JWT authe
 - ## System Design
 
 Below is a architecture of the Event Connect system:
-           ┌──────────────┐
-           │**Frontend**  │
-           │  React App   │
-           │  (Login,     │
-           │   Event List,│
-           │   Booking)   │
-           └─────┬────────┘
-                 │ HTTP + JWT
-                 ▼
-           ┌──────────────┐
-           │  **Backend** │
-           │ Spring Boot  │
-           │ REST APIs    │
-           │ Auth         |
-           | Controller   │
-           │ Booking      |
-           | Controller   │
-           └─────┬────────┘
-                 │ JDBC/SQL
-                 ▼
-           ┌──────────────┐
-           │**Database** │
-           │ PostgreSQL   │
-           │ Users, Events│
-           │ Bookings     │
-           └──────────────┘
+    
+<img width="463" height="540" alt="image" src="https://github.com/user-attachments/assets/0ae06ddb-97b1-4bca-b7e0-e5a71174a8fd" />
+
 
 ## 2. Setup Instructions
 
