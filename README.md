@@ -44,10 +44,10 @@ Below is a architecture of the Event Connect system:
 
 ## Frontend (React)
 
-- Navigate to frontend folder:
-- cd frontend
+- Navigate to frontend folder
 - Install dependencies
 - npm install
+- cd event-connect 
 - Start the frontend:
 - npm start
 - Runs on http://localhost:3000
