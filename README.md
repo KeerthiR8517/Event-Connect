@@ -38,27 +38,40 @@ Below is a architecture of the Event Connect system:
 - Install Java 8 and Maven.
 - Clone repo and navigate to backend folder:
 - git clone <your-repo-url>
-- cd backend
-- Update application.properties with your PostgreSQL credentials.
-- Run the backend
+- IntelliJ → Open → select backend folder
+- Open as Maven project When IntelliJ opens: Click “Load Maven Project” and Wait until dependencies download
+- check pom.xml
+- Set Java SDK in IntelliJ: File → Project Structure
+- Project SDK → select JDK 8 / 17
+- Project language level → same as JDK - Apply → OK
+- Configure database(application.properties)
+- Run Spring Boot application
+- Test API (postman)
 
 ## Frontend (React)
 
-- Navigate to frontend folder
-- Install dependencies
-- npm install
-- cd event-connect 
-- Start the frontend:
-- npm start
-- Runs on http://localhost:3000
+- Download Node.js from: https://nodejs.org
+- After install, check in terminal:
+- node -v
+- npm -v
+- Clone the frontend project
+- after clone : File → Open Folder → select frontend project folder
+- Open terminal in VS Code
+- cd event-connect-frontend
+- Install dependencies(npm install, npm install axios)
+- Run the frontend - npm start
+- After running, terminal will show something like:
+- Local: http://localhost:3000
 
 ## Database
 
 - Install PostgreSQL.
-- Create database (e.g., event_connect) and run schema SQL script:
-- CREATE TABLE users (...);
-- CREATE TABLE events (...);
-- CREATE TABLE bookings (...);
+- Set password and Port: 5432 (default)
+- Open pgAdmin
+- Create Database and schema(event)
+- CREATE TABLE event.users (...);
+- CREATE TABLE event.events (...);
+- CREATE TABLE event.bookings (...);
 
 ### Note:
 Make sure backend is running before frontend to get JWT authentication working.
